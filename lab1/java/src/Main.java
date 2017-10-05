@@ -23,7 +23,7 @@ public class Main {
         // WoodlandController woodland = new ForestController(100) ;
         strategy.WoodlandController woodlandCtr = new strategy.WoodlandController();
         //woodlandCtr.setWoodland(new Forest(100));
-        woodlandCtr.setWoodland(new Jungle(100));
+          woodlandCtr.setWoodland(new Jungle(100));
 
         doForestCycles(5, woodlandCtr);
     }
