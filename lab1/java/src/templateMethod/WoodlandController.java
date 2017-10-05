@@ -1,5 +1,7 @@
 package templateMethod;
 
+import java.math.BigDecimal;
+
 public abstract class WoodlandController {
 
     protected int treeCount;
@@ -16,6 +18,8 @@ public abstract class WoodlandController {
         System.out.println("After grow there is " + treeCount + " trees and " + treesCount + " saplings in the forest");
         plant(seedCount);
         System.out.println(seedCount + " saplings were planted");
+        BigDecimal treeValue = calculatePrice(treesChopped);
+        System.out.println("wood can be sold for " + treeValue + " Eur.");
     }
 
     protected abstract int cutDown();
@@ -23,4 +27,6 @@ public abstract class WoodlandController {
     protected abstract void plant(int treeCount);
 
     protected abstract int grow();
+
+    protected abstract BigDecimal calculatePrice(int treeCount);
 }

@@ -1,6 +1,6 @@
 package templateMethod;
 
-public class ForestController extends WoodlandController {
+public abstract class ForestController extends WoodlandController {
 
     private int treeCutDownLimitCount = 50;
     private double treeCutDownLimitPercentage = 0.20;
@@ -13,19 +13,19 @@ public class ForestController extends WoodlandController {
     }
 
     @Override
-    protected int cutDown() {
-        int chopedTreeCount = Math.min((int) (treeCount * treeCutDownLimitPercentage), treeCutDownLimitCount);
-        treeCount -= chopedTreeCount;
-        return chopedTreeCount;
+    protected final int cutDown() {
+        int choppedTreeCount = Math.min((int) (treeCount * treeCutDownLimitPercentage), treeCutDownLimitCount);
+        treeCount -= choppedTreeCount;
+        return choppedTreeCount;
     }
 
     @Override
-    protected void plant(int treeCount) {
+    protected final void plant(int treeCount) {
         saplingCount+=treeCount/2;
     }
 
     @Override
-    protected int grow() {
+    protected final int grow() {
         int seedCount = (int)(treeCount * seedPercentage);
         treeCount += saplingCount;
         saplingCount = halfGrownSaplings;
