@@ -1,17 +1,18 @@
 package lt.vu.mif.mape;
 
+import lt.vu.mif.mape.tms.rep.config.RepConfig;
 import lt.vu.mif.mape.model.task.Task;
 import lt.vu.mif.mape.model.task.TaskFactory;
 import lt.vu.mif.mape.rep.task.TaskRep;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.util.ObjectUtils;
+import org.springframework.test.context.ContextConfiguration;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+@ContextConfiguration(classes = {RepConfig.class})
 public class TaskRepTest {
 
     @Autowired
@@ -21,7 +22,7 @@ public class TaskRepTest {
     private TaskFactory taskFactory;
 
     private Task task1;
-    
+
     @Before
     public void setUp{
         assertNotNull(taskFactory);

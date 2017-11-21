@@ -10,15 +10,5 @@
     <name>tms-bl</name>
     <packaging>jar</packaging>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <version>1.5.8.RELEASE</version>
-        </dependency>
-        <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter</artifactId>
-    <version>1.5.8.RELEASE</version>
-</dependency>
     </dependencies>
 </project>

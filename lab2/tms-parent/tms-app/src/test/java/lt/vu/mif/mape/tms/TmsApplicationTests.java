@@ -1,4 +1,4 @@
-package lt.vu.mif.mape.tms.app;
+package lt.vu.mif.mape.tms;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

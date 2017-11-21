@@ -14,6 +14,7 @@
 		<module>tms-fasade</module>
 		<module>tms-ext</module>
 		<module>tms-rep</module>
+		<module>tms-app</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,6 +61,7 @@
 				<version>${spring.boot.version}</version>
 				<scope>compile</scope>
 			</dependency>
+
 			<dependency>
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
@@ -74,6 +76,14 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.12</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>5.0.1.RELEASE</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
