@@ -12,16 +12,6 @@
     <artifactId>tms-app</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <version>1.5.8.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>1.5.8.RELEASE</version>
-        </dependency>
-        <dependency>
             <groupId>lt.vu.mif.mape</groupId>
             <artifactId>tms-rep</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -35,6 +25,26 @@
             <groupId>lt.vu.mif.mape</groupId>
             <artifactId>tms-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-ui</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-ext</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 

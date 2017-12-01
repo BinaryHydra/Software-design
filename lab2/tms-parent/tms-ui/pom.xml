@@ -9,5 +9,26 @@
     <artifactId>tms-ui</artifactId>
     <name>tms-ui</name>
     <packaging>jar</packaging>
-    <dependencies></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-facade</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+    </dependencies>
 </project>

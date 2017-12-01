@@ -6,13 +6,28 @@
         <artifactId>tms-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>tms-bl</artifactId>
-    <name>tms-bl</name>
+    <artifactId>tms-facade</artifactId>
+    <name>tms-facade</name>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>lt.vu.mif.mape</groupId>
             <artifactId>tms-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-bl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-rep</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lt.vu.mif.mape</groupId>
+            <artifactId>tms-ext</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

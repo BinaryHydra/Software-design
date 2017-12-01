@@ -9,5 +9,6 @@
     <artifactId>tms-ext</artifactId>
     <name>tms-ext</name>
     <packaging>jar</packaging>
-    <dependencies></dependencies>
+    <dependencies>
+    </dependencies>
 </project>
