@@ -16,7 +16,7 @@ namespace PSP3
         {
             BaseDrawable = drawable;
             RoleName = roleName;
-        } 
+        }
 
         public virtual Bitmap getBitmap()
         {
@@ -34,7 +34,7 @@ namespace PSP3
                 return ((ImageDecorator) BaseDrawable).GetRole(roleNameVar);
             }
             return null;
-         }
+        }
 
         public IDrawable RemoveRole(string roleNameVar)
         {
@@ -55,6 +55,16 @@ namespace PSP3
                 decorator.RemoveRole(roleNameVar);
             }
             return this;
+        }
+
+        public IDrawable GetBaseDrawable()
+        {
+            var drawable = BaseDrawable as ImageDecorator;
+            if (drawable != null)
+            {
+                return drawable.GetBaseDrawable();
+            }
+            return BaseDrawable;
         }
     }
 }

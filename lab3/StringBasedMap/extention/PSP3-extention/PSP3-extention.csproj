@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="extections\IImageExtention.cs" />
+    <Compile Include="extections\ImageExtention.cs" />
     <Compile Include="Drawable.cs" />
     <Compile Include="extections\ImageBrighnessAdjustor.cs" />
     <Compile Include="extections\ImageGreyScaler.cs" />
@@ -55,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\decorator\decorator\PSP3-decorator.csproj">
+      <Project>{7D62DA86-7A59-45A3-8B9E-CB52052359EA}</Project>
+      <Name>PSP3-decorator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

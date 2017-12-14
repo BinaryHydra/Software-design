@@ -4,11 +4,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PSP3;
 
 namespace PSI_extention.extections
 {
-    class ImageBrighnessAdjustor: IImageExtention
+    class ImageBrighnessAdjustor: ImageExtention
     {
+
         private int _brightness;
         public int Brightness
         {
@@ -16,12 +18,12 @@ namespace PSI_extention.extections
             set { SaveAdjustedBrightness(value); }
         }
 
-        public ImageBrighnessAdjustor(int brightness)
+        public ImageBrighnessAdjustor(Drawable baseDrawable, int brightness): base(baseDrawable)
         {
             SaveAdjustedBrightness(brightness);
         }
 
-        public Bitmap ModifyImage(Bitmap bitmap)
+        public override Bitmap ModifyImage(Bitmap bitmap)
         {
             for (var i = 0; i < bitmap.Width; i++)
             {

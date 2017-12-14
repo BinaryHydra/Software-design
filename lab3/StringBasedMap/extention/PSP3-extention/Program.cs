@@ -13,12 +13,12 @@ namespace PSI_extention
         {
             Drawable image = new Image(new Bitmap(routeToDesktop + "FOTO\\tiger.jpg"));
             image.GetBitmap().Save(routeToDesktop + "EXT_Output1.jpg");
-            //image.AddExtention("greyscaler",new ImageGreyScaler());
-            image.AddExtention("inverter", new ImageInverter());
+            //image.AddExtention("greyscaler",new ImageGreyScaler(image));
+            image.AddExtention("inverter", new ImageInverter(image));
             image.GetBitmap().Save(routeToDesktop + "EXT_Output2.jpg");
             image.RemoveExtention("inverter");
             image.GetBitmap().Save(routeToDesktop + "EXT_Output3.jpg");
-            image.AddExtention("brigness adjustor",new ImageBrighnessAdjustor(-100));
+            image.AddExtention("brigness adjustor",new ImageBrighnessAdjustor(image,-100));
             image.GetBitmap().Save(routeToDesktop + "EXT_Output4.jpg");
             ((ImageBrighnessAdjustor)image.GetExtention("brigness adjustor")).Brightness = 100;
             image.GetBitmap().Save(routeToDesktop + "EXT_Output5 .jpg");

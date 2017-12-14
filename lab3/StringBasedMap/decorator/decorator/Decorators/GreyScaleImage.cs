@@ -10,7 +10,7 @@ namespace PSP3
     public class GreyScaleImage : ImageDecorator
     {
 
-        public GreyScaleImage(string roleName,IDrawable image) : base (roleName, image)
+        public GreyScaleImage(string roleName, IDrawable image) : base (roleName, image)
         {
         }
 

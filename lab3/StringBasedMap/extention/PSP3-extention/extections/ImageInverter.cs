@@ -4,12 +4,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PSP3;
 
 namespace PSI_extention.extections
 {
-    public class ImageInverter: IImageExtention
+    public class ImageInverter: ImageExtention
     {
-        public Bitmap ModifyImage(Bitmap bitmap)
+        public ImageInverter(Drawable decoratable) : base(decoratable)
+        {
+        }
+
+        public override Bitmap ModifyImage(Bitmap bitmap)
         {
             for (int i = 0; i < bitmap.Width; i++)
             {

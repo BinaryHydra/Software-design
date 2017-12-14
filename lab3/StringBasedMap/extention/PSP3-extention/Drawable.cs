@@ -7,20 +7,20 @@ namespace PSP3
 {
     public abstract class Drawable
     {
-        protected Dictionary<string, IImageExtention> Extentions = new Dictionary<string, IImageExtention>();
+        protected Dictionary<string, ImageExtention> Extentions = new Dictionary<string, ImageExtention>();
 
         public abstract Bitmap GetBitmap();
 
 
-        public void AddExtention(string roleName,IImageExtention ext)
+        public void AddExtention(string roleName,ImageExtention ext)
         {
             Extentions.Add(roleName, ext);
         }
 
 
-        public IImageExtention GetExtention(string rolename)
+        public ImageExtention GetExtention(string rolename)
         {
-            IImageExtention extention;
+            ImageExtention extention;
             Extentions.TryGetValue(rolename, out extention);
             return extention;
         }

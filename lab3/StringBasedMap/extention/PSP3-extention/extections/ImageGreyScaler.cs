@@ -4,12 +4,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PSP3;
 
 namespace PSI_extention.extections
 {
-    public class ImageGreyScaler : IImageExtention
+    public class ImageGreyScaler : ImageExtention
     {
-        public Bitmap ModifyImage(Bitmap bitmap)
+        public ImageGreyScaler(Drawable decoratable) : base(decoratable)
+        {
+        }
+
+        public override Bitmap ModifyImage(Bitmap bitmap)
         {  
             for (var i = 0; i < bitmap.Width; i++)
             {
@@ -22,5 +27,7 @@ namespace PSI_extention.extections
             }
             return bitmap;
         }
+
+        
     }
 }
