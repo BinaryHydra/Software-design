@@ -14,9 +14,9 @@ namespace PSP3
         {
         }
 
-        public override Bitmap getBitmap()
+        public override Bitmap GetBitmap()
         {
-           Bitmap bitmap = BaseDrawable.getBitmap();
+           Bitmap bitmap = BaseDrawable.GetBitmap();
            return GreyScale(bitmap);
         }
 

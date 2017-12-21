@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSP3
+namespace PSI_extention
 {
     public interface IDrawable
     {
-        int Width { get; }
-        int Height { get;}
-
         Bitmap GetBitmap();
+        int Width { get; }
+        int Height { get; }
+
     }
 }

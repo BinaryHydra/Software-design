@@ -10,11 +10,7 @@ namespace PSI_extention.extections
 {
     public class ImageGreyScaler : ImageExtention
     {
-        public ImageGreyScaler(Drawable decoratable) : base(decoratable)
-        {
-        }
-
-        public override Bitmap ModifyImage(Bitmap bitmap)
+        public Bitmap ModifyImage(Bitmap bitmap)
         {  
             for (var i = 0; i < bitmap.Width; i++)
             {
@@ -27,7 +23,5 @@ namespace PSI_extention.extections
             }
             return bitmap;
         }
-
-        
     }
 }

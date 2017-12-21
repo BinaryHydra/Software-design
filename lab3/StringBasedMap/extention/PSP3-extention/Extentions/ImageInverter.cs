@@ -10,11 +10,7 @@ namespace PSI_extention.extections
 {
     public class ImageInverter: ImageExtention
     {
-        public ImageInverter(Drawable decoratable) : base(decoratable)
-        {
-        }
-
-        public override Bitmap ModifyImage(Bitmap bitmap)
+        public  Bitmap ModifyImage(Bitmap bitmap)
         {
             for (int i = 0; i < bitmap.Width; i++)
             {

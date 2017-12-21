@@ -64,7 +64,6 @@
     <Compile Include="Image.cs" />
     <Compile Include="IDrawable.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

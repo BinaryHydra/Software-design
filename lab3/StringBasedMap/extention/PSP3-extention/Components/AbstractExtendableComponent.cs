@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using PSI_extention.Components;
 using PSI_extention.extections;
+using PSI_extention.Extentions;
 
 namespace PSP3
 {
-    public abstract class Drawable
+    public abstract class AbstractExtendableComponent : IExtendableComponent
     {
-        protected Dictionary<string, ImageExtention> Extentions = new Dictionary<string, ImageExtention>();
+        protected Dictionary<string, IExtention> Extentions = new Dictionary<string, IExtention>();
 
-        public abstract Bitmap GetBitmap();
-
-
-        public void AddExtention(string roleName,ImageExtention ext)
+        public void AddExtention(string roleName, IExtention ext)
         {
             Extentions.Add(roleName, ext);
         }
 
 
-        public ImageExtention GetExtention(string rolename)
+        public IExtention GetExtention(string rolename)
         {
-            ImageExtention extention;
+            IExtention extention;
             Extentions.TryGetValue(rolename, out extention);
             return extention;
         }

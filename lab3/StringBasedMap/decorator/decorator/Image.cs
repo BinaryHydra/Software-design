@@ -19,7 +19,7 @@ namespace PSP3
             Width = bitmapVar.Width;
         }
 
-        public Bitmap getBitmap()
+        public Bitmap GetBitmap()
         {
             return _bitmap;
         }

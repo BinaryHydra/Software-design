@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using PSI_extention.Components;
 using PSI_extention.extections;
-using PSP3;
+using PSI_extention.Extentions;
 using Image = PSP3.Image;
 
 namespace PSI_extention
@@ -11,17 +12,19 @@ namespace PSI_extention
         const String routeToDesktop = "C:\\Users\\petri\\Desktop\\";
         static void Main(string[] args)
         {
-            Drawable image = new Image(new Bitmap(routeToDesktop + "FOTO\\tiger.jpg"));
+            IDrawable image = new Image(new Bitmap(routeToDesktop + "FOTO\\tiger.jpg"));
             image.GetBitmap().Save(routeToDesktop + "EXT_Output1.jpg");
-            //image.AddExtention("greyscaler",new ImageGreyScaler(image));
-            image.AddExtention("inverter", new ImageInverter(image));
+            //((IExtendableComponent)image).AddExtention("greyscaler",new ImageGreyScaler());
+            ((IExtendableComponent)image).AddExtention("inverter", new ImageInverter());
             image.GetBitmap().Save(routeToDesktop + "EXT_Output2.jpg");
-            image.RemoveExtention("inverter");
+            ((IExtendableComponent)image).RemoveExtention("inverter");
             image.GetBitmap().Save(routeToDesktop + "EXT_Output3.jpg");
-            image.AddExtention("brigness adjustor",new ImageBrighnessAdjustor(image,-100));
+            ((IExtendableComponent)image).AddExtention("brigness adjustor",new ImageBrighnessAdjustor(-100));
             image.GetBitmap().Save(routeToDesktop + "EXT_Output4.jpg");
-            ((ImageBrighnessAdjustor)image.GetExtention("brigness adjustor")).Brightness = 100;
-            image.GetBitmap().Save(routeToDesktop + "EXT_Output5 .jpg");
+            ((ImageBrighnessAdjustor)((IExtendableComponent)image).GetExtention("brigness adjustor")).Brightness = 100;
+            image.GetBitmap().Save(routeToDesktop + "EXT_Output5.jpg");
+            ((IExtendableComponent)image).AddExtention("Size x2", new ImageResizer(2, image));
+            image.GetBitmap().Save(routeToDesktop + "EXT_Bigger.jpg");
 
         }
     }

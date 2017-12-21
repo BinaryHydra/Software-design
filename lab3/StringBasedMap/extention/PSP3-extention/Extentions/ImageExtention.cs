@@ -6,11 +6,11 @@ namespace PSI_extention.extections
 {
     public abstract class ImageExtention
     {
-        private Drawable _baseDrawable;
+        protected ImageComponent BaseImageComponent;
 
-        protected ImageExtention(Drawable decoratable)
+        protected ImageExtention(ImageComponent extendable)
         {
-            _baseDrawable = decoratable;
+            BaseImageComponent = extendable;
         }
         public abstract Bitmap ModifyImage(Bitmap bitmap);
     }

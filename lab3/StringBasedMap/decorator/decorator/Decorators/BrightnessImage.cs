@@ -36,9 +36,9 @@ namespace PSP3.Decorators
             _brightness = value;
         }
 
-        public override Bitmap getBitmap()
+        public override Bitmap GetBitmap()
         {
-            Bitmap bitmap = BaseDrawable.getBitmap();
+            Bitmap bitmap = BaseDrawable.GetBitmap();
             return ChangeBitmapBrightness(bitmap);
         }
 

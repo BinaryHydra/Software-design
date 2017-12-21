@@ -18,12 +18,12 @@ namespace PSI_extention.extections
             set { SaveAdjustedBrightness(value); }
         }
 
-        public ImageBrighnessAdjustor(Drawable baseDrawable, int brightness): base(baseDrawable)
+        public ImageBrighnessAdjustor(int brightness)
         {
             SaveAdjustedBrightness(brightness);
         }
 
-        public override Bitmap ModifyImage(Bitmap bitmap)
+        public Bitmap ModifyImage(Bitmap bitmap)
         {
             for (var i = 0; i < bitmap.Width; i++)
             {

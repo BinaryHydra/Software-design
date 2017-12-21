@@ -44,11 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="extections\ImageExtention.cs" />
-    <Compile Include="Drawable.cs" />
-    <Compile Include="extections\ImageBrighnessAdjustor.cs" />
-    <Compile Include="extections\ImageGreyScaler.cs" />
-    <Compile Include="extections\ImageInverter.cs" />
+    <Compile Include="Extentions\ImageExtention.cs" />
+    <Compile Include="ImageComponent.cs" />
+    <Compile Include="Extentions\ImageBrighnessAdjustor.cs" />
+    <Compile Include="Extentions\ImageGreyScaler.cs" />
+    <Compile Include="Extentions\ImageInverter.cs" />
+    <Compile Include="Extentions\ImageResizer.cs" />
+    <Compile Include="IDrawable.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

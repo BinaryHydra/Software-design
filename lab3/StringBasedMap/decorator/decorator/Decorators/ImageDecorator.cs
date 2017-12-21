@@ -9,6 +9,7 @@ namespace PSP3
 {
     public abstract class ImageDecorator : IDrawable
     {
+        
         protected IDrawable BaseDrawable { get; set; }
         protected string RoleName;
 
@@ -18,10 +19,15 @@ namespace PSP3
             RoleName = roleName;
         }
 
-        public virtual Bitmap getBitmap()
+        public int Width => BaseDrawable.Width;
+        public int Height => BaseDrawable.Height;
+
+        public virtual Bitmap GetBitmap()
         {
-            return BaseDrawable.getBitmap();
+            return BaseDrawable.GetBitmap();
         }
+
+
 
         public ImageDecorator GetRole(string roleNameVar)
         {

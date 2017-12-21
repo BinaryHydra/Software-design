@@ -1,13 +1,14 @@
 ﻿using System.Drawing;
 using System.Linq;
+using PSI_extention.extections;
 
 namespace PSP3
 {
-    public class Image: Drawable
+    public class Image: AbstractExtendableComponent, IDrawable
     {
         private readonly Bitmap _bitmap;
-        public int Width { get; private set; }
-        public int Height { get; private set; }
+        public int Width { get; }
+        public int Height { get; }
 
         public Image(Bitmap bitmapVar) {
             _bitmap = bitmapVar;
@@ -15,12 +16,12 @@ namespace PSP3
             Width = bitmapVar.Width;
         }
 
-        public override Bitmap GetBitmap()
+        public Bitmap GetBitmap()
         {
             var tempBitmap = (Bitmap) _bitmap.Clone();
             Bitmap result = tempBitmap;
             foreach (var extention in Extentions)
-                result = extention.Value.ModifyImage(result);
+                result = ((ImageExtention)extention.Value).ModifyImage(result);
             return result;
 
         }

@@ -13,9 +13,9 @@ namespace PSP3.Decorators
         {
         }
 
-        public override Bitmap getBitmap()
+        public override Bitmap GetBitmap()
         {
-            Bitmap bitmap = BaseDrawable.getBitmap();
+            Bitmap bitmap = BaseDrawable.GetBitmap();
             return InvertBitmap(bitmap);
         }
 
