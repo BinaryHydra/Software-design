@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Drawing;
+using PSI_extention.Extentions;
 using PSP3;
 
 namespace PSI_extention.extections
 {
-    public abstract class ImageExtention
-    {
-        protected ImageComponent BaseImageComponent;
+    public interface ImageExtention: IExtention {
 
-        protected ImageExtention(ImageComponent extendable)
-        {
-            BaseImageComponent = extendable;
-        }
-        public abstract Bitmap ModifyImage(Bitmap bitmap);
+        Bitmap ModifyImage(Bitmap bitmap);
     }
 }

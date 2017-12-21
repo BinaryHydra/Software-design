@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PSI_extention.Extentions
 {
-    interface IExtention
+    public interface IExtention
     {
     }
 }

@@ -24,6 +24,13 @@ namespace PSP3
             return extention;
         }
 
+        public T GetExtention<T>(string rolename) where T: class, IExtention
+        {
+            IExtention extention;
+            Extentions.TryGetValue(rolename, out extention);
+            return extention as T;
+        }
+
         public bool RemoveExtention(string roleName)
         {
             return Extentions.Remove(roleName);

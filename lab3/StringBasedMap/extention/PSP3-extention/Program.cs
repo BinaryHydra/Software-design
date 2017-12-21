@@ -21,7 +21,8 @@ namespace PSI_extention
             image.GetBitmap().Save(routeToDesktop + "EXT_Output3.jpg");
             ((IExtendableComponent)image).AddExtention("brigness adjustor",new ImageBrighnessAdjustor(-100));
             image.GetBitmap().Save(routeToDesktop + "EXT_Output4.jpg");
-            ((ImageBrighnessAdjustor)((IExtendableComponent)image).GetExtention("brigness adjustor")).Brightness = 100;
+            ((IExtendableComponent)image).GetExtention<ImageBrighnessAdjustor>("brigness adjustor").Brightness = 100;
+            //((ImageBrighnessAdjustor)((IExtendableComponent)image).GetExtention("brigness adjustor")).Brightness = 100;
             image.GetBitmap().Save(routeToDesktop + "EXT_Output5.jpg");
             ((IExtendableComponent)image).AddExtention("Size x2", new ImageResizer(2, image));
             image.GetBitmap().Save(routeToDesktop + "EXT_Bigger.jpg");

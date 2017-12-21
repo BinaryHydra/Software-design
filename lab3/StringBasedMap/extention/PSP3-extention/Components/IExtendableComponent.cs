@@ -15,5 +15,8 @@ namespace PSI_extention.Components
         IExtention GetExtention(string rolename);
 
         bool RemoveExtention(string roleName);
+
+        T GetExtention<T>(string rolename) where T : class, IExtention;
+
     }
 }

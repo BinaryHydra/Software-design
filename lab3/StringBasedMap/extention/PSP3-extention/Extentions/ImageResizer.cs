@@ -12,15 +12,16 @@ namespace PSI_extention.Extentions
     public class ImageResizer: ImageExtention
     {
         public double Ratio;
-        public ImageResizer(double ratio, ImageComponent extendable) : base(extendable)
-        {
+        private IDrawable baseDrawable;
+        public ImageResizer(double ratio, IDrawable extendable) {
             Ratio = ratio;
+            baseDrawable = extendable;
         }
 
-        public override Bitmap ModifyImage(Bitmap bitmap)
+        public Bitmap ModifyImage(Bitmap bitmap)
         {
-            var newWidth = (int)(Ratio * BaseImageComponent.Width);
-            var newHeight = (int)(Ratio * BaseImageComponent.Height);
+            var newWidth = (int)(Ratio * baseDrawable.Width);
+            var newHeight = (int)(Ratio * baseDrawable.Height);
 
             if (newWidth != 0 && newHeight != 0)
             {
